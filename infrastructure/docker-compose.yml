@@ -1,0 +1,47 @@
+version: "3.7"
+
+services:
+  reverseproxy:
+    image: axonquiz/reverseproxy:latest
+    ports:
+      - "8081:80"
+    networks:
+      - axon-quiz
+
+  axonserver:
+    image: axoniq/axonserver:latest
+    ports:
+      - "8024:8024"
+      - "8124:8124"
+      - "8224:8224"
+    environment:
+      AXONIQ_AXONSERVER_DEVMODE_ENABLED: "true"
+    networks:
+      - axon-quiz
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: r00t
+    networks:
+      - axon-quiz
+
+  mongo-express:
+    image: mongo-express:latest
+    restart: always
+    ports:
+      - "8082:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: r00t
+      ME_CONFIG_MONGODB_URL: mongodb://root:r00t@mongo:27017/
+    networks:
+      - axon-quiz
+
+networks:
+  axon-quiz:
+    external: true

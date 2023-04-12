@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  payment-processor:
+    image: axonquiz/payment-processor:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: swarm
+    networks:
+      - axon-quiz
+
+networks:
+  axon-quiz:
+    external: true

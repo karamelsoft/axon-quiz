@@ -1,0 +1,64 @@
+###
+# @name = Block card
+POST http://localhost:8081/service/interfaces/http/cards/5344203716459597/block
+Content-Type: application/json
+
+{
+  "amount": 28.43,
+  "from": "Robert",
+  "description": "For the drinks at the bar"
+}
+
+###
+# @name = Setup Pin Card
+PUT http://localhost:8081/service/interfaces/http/cards/5344203716459597/pin/setup
+Content-Type: application/json
+
+{
+  "pinCode": "1234"
+}
+
+###
+# @name = Change Pin Card
+POST http://localhost:8081/service/interfaces/http/cards/5344203716459597/pin/change
+Content-Type: application/json
+
+{
+  "currentPinCode": "1234",
+  "newPinCode": "2468"
+}
+
+###
+# @name = Validate Pin Card
+POST http://localhost:8081/service/interfaces/http/cards/5344203716459597/pin/validate
+Content-Type: application/json
+
+{
+  "currentPinCode": "2468"
+}
+
+###
+# @name = Validate Pin Card With Wrong Code
+POST http://localhost:8081/service/interfaces/http/cards/5344203716459597/pin/validate
+Content-Type: application/json
+
+{
+  "currentPinCode": "2341"
+}
+
+###
+# @name = Get Card History
+GET http://localhost:8081/service/interfaces/http/cards/5344203716459597/history
+Content-Type: application/json
+
+###
+# @name = Pay By Card
+POST http://localhost:8081/service/interfaces/http/cards/5344203716459597/payment
+Content-Type: application/json
+
+{
+  "pinCode": "2467",
+  "amount": "50",
+  "destination": "BE29988574361013",
+  "description": "mon shopping du dimanche"
+}
