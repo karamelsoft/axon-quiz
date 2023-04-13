@@ -26,6 +26,7 @@
 		<module>views</module>
         <module>orchestrators</module>
 		<module>interfaces</module>
+		<module>domains/users/users-domain</module>
 	</modules>
 
 	<dependencyManagement>
@@ -100,6 +101,12 @@
 			<dependency>
 				<groupId>org.karamelsoft.axon.quiz.libraries.artifacts</groupId>
 				<artifactId>view</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.karamelsoft.axon.quiz.domains.users</groupId>
+				<artifactId>users-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
