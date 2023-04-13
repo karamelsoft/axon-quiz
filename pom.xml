@@ -104,32 +104,6 @@
 			</dependency>
 
 			<dependency>
-				<groupId>org.karamelsoft.axon.quiz.services.accounts</groupId>
-				<artifactId>accounts-api</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.karamelsoft.axon.quiz.services.cards</groupId>
-				<artifactId>cards-api</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.karamelsoft.axon.quiz.services.customers</groupId>
-				<artifactId>customers-api</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.karamelsoft.axon.quiz.views.customer.dashboard</groupId>
-				<artifactId>customer-dashboard-api</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.karamelsoft.axon.quiz.orchestrators.payment</groupId>
-				<artifactId>payment-api</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-
-			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>${guava.version}</version>

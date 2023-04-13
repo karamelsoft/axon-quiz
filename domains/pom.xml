@@ -11,15 +11,12 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.karamelsoft.axon.quiz.services</groupId>
+    <groupId>org.karamelsoft.axon.quiz.domains</groupId>
     <artifactId>domains</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-
-        <module>accounts</module>
-        <module>cards</module>
-        <module>customers</module>
+        <module>users</module>
     </modules>
 
 </project>
